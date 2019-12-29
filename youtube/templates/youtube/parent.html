@@ -19,9 +19,18 @@
       your experience.
       </p>
     <![endif]-->
-    MENU:
-    <br />
-    HOME | <a href="/new_video">Add Video</a> | Sign In | Sign Up
+    <section class="section">
+      <div class="container">
+        <nav class="breadcrumb">
+          <ul>
+            <li><a href="/">HOME</a></li>
+            <li><a href="/new_video">Add Video</a></li>
+            <li><a href="/login">Sign In</a></li>
+            <li><a href="/register">Sign Up</a></li>
+          </ul> 
+        </nav>
+      </div>
+    </section>
     <br />
     {% block body %}
     {% endblock %}
