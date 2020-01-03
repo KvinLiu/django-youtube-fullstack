@@ -7,7 +7,8 @@
 {% block body %}
   <form method="POST" action="login">
     {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Login!" />
+    {{ form.as_table }}
+    <br />
+    <button class="button">LogIn</button>
   </form>
 {% endblock %}

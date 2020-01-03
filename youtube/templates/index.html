@@ -10,7 +10,8 @@ Home
   Most Recent Video:<br />
 
   <ul>
-    <li>Video ID 1</li>
-    <li>Video ID 2</li>
+    {% for video in most_recent_videos %}
+    <li><a href="video/{{video.id}}">{{video.title}}</a></li>
+    {% endfor %}
   </ul>
 {% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'youtube/parent.html' %}
+
+{% block title %}
+  New Video
+{% endblock %}
+
+{% block body %}
+  <div class="columns is-mobile">
+    <div class="column is-half is-offset-one-quarter">
+      <h3 class="title is-3">Add New Video</h3>
+      <form enctype="multipart/form-data" method="POST" action="new_video">
+        {% csrf_token %}
+        {% for field in form %}
+          <div class="field">
+            <label for="{{ field.id_for_label }}" class="label">{{ field.html_name }}</label>
+            {{ field }}
+          </div>
+        {% endfor %}
+        <button class="button is-primary">Upload Video</button>
+      </form>
+    </div>
+  </div>
+{% endblock %}

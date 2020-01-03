@@ -19,14 +19,15 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls import include, url
 
-from youtube.views import HomeView, NewVideo, LoginView, RegisterView
+from youtube.views import HomeView, NewVideo, LoginView, RegisterView, VideoView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', HomeView.as_view()),
     path('new_video', NewVideo.as_view()),
     path('login', LoginView.as_view()),
-    path('register', RegisterView.as_view())
+    path('register', RegisterView.as_view()),
+    path('video/<int:id>', VideoView.as_view())
 ]
 
 if settings.DEBUG:
